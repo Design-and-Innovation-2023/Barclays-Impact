@@ -10,7 +10,17 @@
   <meta content="" name="keywords" />
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon" />
+  <script>
+    (function () {
+      var link = document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? '../assets/img/websitelogo_white.ico'
+        : '../assets/img/websitelogo.ico';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }());
+  </script>>
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
