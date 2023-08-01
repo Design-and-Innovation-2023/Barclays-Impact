@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Impact Bootstrap Template - Blog</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <!-- =======================================================
+    * Template Name: Impact
+    * Updated: Jul 27 2023 with Bootstrap v5.3.1
+    * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+  <!-- Defined Styles -->
+  <style>
+    .dropdown-toggle {
+      outline: 0;
+    }
+
+    .btn-toggle {
+      padding: .25rem .5rem;
+      font-weight: 600;
+      color: var(--bs-emphasis-color);
+      background-color: transparent;
+    }
+
+    .btn-toggle:hover,
+    .btn-toggle:focus {
+      color: rgba(var(--bs-emphasis-color-rgb), .85);
+      background-color: var(--bs-tertiary-bg);
+    }
+
+    .btn-toggle::before {
+      width: 1.25em;
+      line-height: 0;
+      content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+      transition: transform .35s ease;
+      transform-origin: .5em 50%;
+    }
+
+    [data-bs-theme="dark"] .btn-toggle::before {
+      content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28255,255,255,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+    }
+
+    .btn-toggle[aria-expanded="true"] {
+      color: rgba(var(--bs-emphasis-color-rgb), .85);
+    }
+
+    .btn-toggle[aria-expanded="true"]::before {
+      transform: rotate(90deg);
+    }
+
+    .btn-toggle-nav a {
+      padding: .1875rem .5rem;
+      margin-top: .125rem;
+      margin-left: 1.25rem;
+    }
+
+    .btn-toggle-nav a:hover,
+    .btn-toggle-nav a:focus {
+      background-color: var(--bs-tertiary-bg);
+    }
+
+    .scrollarea {
+      overflow-y: auto;
+    }
+
+    .sticky-sidebar {
+      position: sticky;
+      top: 80px;
+      /* Adjust this value to set the distance from the top of the viewport when sticky */
+      z-index: 100;
+      /* Set an appropriate z-index if needed to ensure it appears above other elements */
+    }
+
+    .day-header {
+      scroll-margin-top: 120px;
+    }
+
+    .main-content {
+      display: flex;
+    }
+
+    .sidebar {
+      flex: 0 0 15rem;
+      height: calc(100vh - 60px);
+      overflow-x: hidden;
+      overflow-y: auto;
+      border-right: 1px solid #dee2e6;
+      padding: 20px;
+    }
+
+    .page-content {
+      flex-grow: 1;
+      padding-left: 20px;
+    }
+
+    .btn-toggle-collapse {
+      text-align: left;
+    }
+
+    .list-group-item {
+      border: none;
+      padding-left: 30px;
+    }
+
+    .btn-toggle-collapse i {
+      margin-right: 10px;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      margin-right: 15%;
+    }
+
+    .content-section {
+      flex: 4;
+      /* Adjust as needed */
+    }
+
+    .breadcrumb-container {
+      padding-left: 30px;
+    }
+
+    .next-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 15px; /* Increase the border-radius property to make the button more rounded */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.button-container {
+    text-align: right;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <nav>
+    <!-- ======= Header ======= -->
+    <section id="topbar" class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:oipteam6a@gmail.com">oipteam6a@gmail.com</a></i>
+          <!-- <i class="bi bi-phone d-flex align-items-center ms-4"><span></span></i> -->
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://twitter.com/Barclays" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/BarclaysUK/" target="_blank" class="facebook"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/barclaysuk/" target="_blank" class="instagram"><i
+              class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </section><!-- End Top Bar -->
+
+    <header id="header" class="header d-flex align-items-center">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1>Barclays Impact<span>.</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="dailies.html"><span>Dailies</span> <i
+                  class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li class="dropdown"><a href="dailies.html#week-1"><span>Week 1</span> <i
+                      class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                    <li><a href="dailies.html#day-1">Day 1</a></li>
+                    <li><a href="dailies.html#day-2">Day 2</a></li>
+                    <li><a href="dailies.html#day-3">Day 3</a></li>
+                    <li><a href="dailies.html#day-4">Day 4</a></li>
+                    <li><a href="dailies.html#day-5">Day 5</a></li>
+                    <li><a href="dailies.html#day-6">Day 6</a></li>
+                    <li><a href="dailies.html#day-7">Day 7</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="dailies.html#week-2"><span>Week 2</span> <i
+                      class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                    <li><a href="#">Day 8</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="pitches.html">Pitches</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav><!-- .navbar -->
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      </div>
+    </header>
+    <!-- End Header -->
+  </nav>
+
+  <!-- Breadcrumbs Header -->
+  <div class="breadcrumbs">
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <div class="breadcrumbs">
+        <div class="page-header d-flex align-items-center" style="background-image: url('')">
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>Dailies</h2>
+                <p>
+                  Explore our Daily Progress Updates
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav>
+          <div class="breadcrumb-container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li>Dailies</li>
+            </ol>
+          </div>
+        </nav>
+      </div>
+      <!-- End Breadcrumbs -->
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+      <div>
+        <button class="btn btn-block btn-toggle-collapse" type="button" data-toggle="collapse"
+          data-target="#sidebarCollapse1" aria-expanded="false" aria-controls="sidebarCollapse1">
+          <i class="fas fa-angle-down"></i> Week 1
+        </button>
+        <div class="collapse" id="sidebarCollapse1">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="url_for_subitem_1.1">Day 1 (18 July 2021)</a></li>
+            <li class="list-group-item"><a href="url_for_subitem_1.2">Day 2 (19 July 2021)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Add another main header here -->
+      <div>
+        <button class="btn btn-block btn-toggle-collapse" type="button" data-toggle="collapse"
+          data-target="#sidebarCollapse2" aria-expanded="false" aria-controls="sidebarCollapse2">
+          <i class="fas fa-angle-down"></i> Main Header 2
+        </button>
+        <div class="collapse" id="sidebarCollapse2">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="url_for_subitem_2.1">Subitem 2.1</a></li>
+            <li class="list-group-item"><a href="url_for_subitem_2.2">Subitem 2.2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Page Content -->
+    <div class="page-content">
+      <!-- Your main content here -->
+      <!-- ======= Dailies Section ======= -->
+      <section id="week-1" class="blog flex-shrink-0">
+        <div class="container" data-aos="fade-up">
+          <h1 class="week-header">Week 1</h1>
+          <hr>
+          <h2 class="day-header" id="day-1">Day 1 | 18 July 2023</h2>
+          <div class="container" data-aos="fade-up">
+            <p><br>Scheduled our first meeting with our client on Wednesday, 19 July 2023 at 10 am.
+              We have crafted and refined our questions for the requirements-gathering session
+              with our client tomorrow. </p>
+            <p>Today, our team learned about mental models and how they apply to computing science
+              and gathering the requirements of stakeholders in our project. Moreover, we have learned
+              to ask good questions using the Mum Test which helped our team craft questions that do not
+              provide generic responses such as yes and no. </p>
+            <p>We are also in the midst of crafting our team contract.</p>
+            <p> The questions prepared by the team for Barclays are: </p>
+            <ol>
+              <li>What is your reason for creating an autodonate app - what is the goal you want to achieve? </li>
+              <li>What would you define as success for this project? </li>
+              <li>What makes you different from other donation applications? (Goal of project) </li>
+              <li>Based on your customer demographic, how likely do you think users are to adopt this application and
+                what can make this number higher? </li>
+              <li>What methods could be implemented to accurately track users' spending habits and determine appropriate
+                donation amounts? </li>
+              <li>How can we incentivize users to use the app regularly and maintain their donation commitments? </li>
+              <li>Are there any legal or regulatory considerations that need to be considered when handling financial
+                transactions and charitable donations? </li>
+              <li>Are there any specific branding or design guidelines that need to be followed to align with Barclays'
+                image and values? </li>
+              <li>How can the app leverage spending habits to determine suitable charities for individuals? Are there
+                any existing data sources or APIs that can be utilised? </li>
+              <li>Are there any existing charity partners you would like us to focus on? </li>
+              <li>Limitations of charity donations </li>
+            </ol>
+            <p> Technical Requirements </p>
+            <ol>
+              <li>What features would users expect in the Auto Donate app? Such as goal tracking, impact stories. </li>
+              <li>Is there any preference for the Auto Donate App being a mobile application or web application? If so,
+                what? </li>
+              <li>Would the app be integrated within the Barclays banking application, or would it be a separate
+                application? </li>
+              <li>Are there any specific accessibility or inclusivity requirements that the app should meet? </li>
+              <li>Which payment processer should we use? And would there be any test APIs for us to use? </li>
+              <li>How might the app integrate with existing payment systems and platforms to streamline the donation
+                process </li>
+            </ol>
+          </div>
+          <hr>
+          <div class="button-container">
+            <a href="nextpage.html" class="next-btn">Day 2 (19 July 2023) →</a>
+        </div>
+        </div>
+      </section>
+
+    
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+
+      <!-- Template Main JS File -->
+      <script src="assets/js/main.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
