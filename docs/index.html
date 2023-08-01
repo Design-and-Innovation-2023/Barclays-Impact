@@ -6,7 +6,19 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Team 6A - Barclays Impact</title>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/websitelogo_white.ico">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/websitelogo_blue.ico"> -->
+    <script>
+        (function() {
+            var link = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = window.matchMedia('(prefers-color-scheme: dark)').matches 
+                            ? 'assets/img/websitelogo_white.ico' 
+                            : 'assets/img/websitelogo.ico';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }());
+    </script>
+
   <meta content="" name="description">
   <meta content="" name="keywords">
 
