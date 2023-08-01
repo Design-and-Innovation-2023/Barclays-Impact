@@ -12,16 +12,3 @@ This website documents the team's journey from creation to the final product, pr
 |Lim Wei Jie|2717882L|
 |Zamora Zchyrlene Mae Prades|2717897P|
 
-## How to use
-
-Change directory into the auto-donate folder
-
-`cd auto-donate`
-
-Install NPM modules
-
-`npm i`
-
-Run the website
-
-`npm run start`
